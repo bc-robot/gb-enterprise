@@ -11,6 +11,11 @@ function register (app) {
         this.body = 'Home Page';
     }); // responds to "/"
 
+    router.post('/abc', function *(){
+        console.log(this.jwt_auth_result,' this is - - -result');
+        this.body = 'Home Page';
+    }); // responds to "/"
+
     app.use(router.routes());
     app.use(router.allowedMethods());
 }

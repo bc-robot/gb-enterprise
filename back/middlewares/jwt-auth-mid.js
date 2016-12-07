@@ -22,9 +22,9 @@ function jwtAuthMid() {
                 error_msg = err;
             });
 
-            console.log(error_msg, jwt_auth_result, ' - - - - - - - - - - - - - - - - - - - - - - - - ');
+            // console.log(error_msg, jwt_auth_result, ' - - - - - - - - - - - - - - - - - - - - - - - - ');
             if(jwt_auth_result){
-                console.log(jwt_auth_result, 'this is middleware<<<<<<');
+                // console.log(jwt_auth_result, 'this is middleware<<<<<<');
                 this.jwt_auth_result = jwt_auth_result;
                 yield *next;
             } else if(error_msg) {
