@@ -23,7 +23,7 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
             favicon:path.join(__dirname,'src/favicon.ico'),
-            title: "c blog",
+            title: "项目工场——企业",
             template: path.join(__dirname,'src/index.html'),
             inject: true
         }),

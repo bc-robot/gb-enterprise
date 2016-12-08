@@ -49,7 +49,9 @@ module.exports = function(app) {
 
 
 
-    app.use(cors());
+    app.use(cors({
+        credentials: true
+    }));
     app.use(xmlParser());
     app.use(bodyParser());
 

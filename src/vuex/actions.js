@@ -15,3 +15,15 @@ export const getTrade = ({ dispatch },id) => {
         dispatch(types.GET_TRADE_FALIURE)
     })
 }
+
+export const showBuggy = ({ dispatch,store }, status) => {
+    return dispatch(types.SHOW_BUGGY, status)
+}
+
+export const subBug = ({ dispatch }, data) => {
+    api.subBug(data).then( response => {
+        if(!response.ok) {
+            return dispatch(types.POST_BUG_FAILURE)
+        }
+    })
+}

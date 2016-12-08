@@ -3,6 +3,10 @@
         <Navbar></Navbar>
         <router-view></router-view>
         <Footerbar></Footerbar>
+        <div id="demo">
+            <p>{{message}}</p>
+            <input v-model="message">
+        </div>
     </div>
 </template>
 
@@ -16,6 +20,11 @@
         components: {
             Navbar, Footerbar
         },
+        data() {
+            return {
+                message: 'Hello Vue.js!'
+            }
+        }
     }
 </script>
 

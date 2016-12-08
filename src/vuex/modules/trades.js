@@ -6,9 +6,7 @@ import {
     GET_TRADE_SUCCESS
 } from '../mutation-types'
 
-const state = {
-    trade: []
-}
+const state = []
 
 const mutations = {
     [GET_TRADE_FALIURE](state, action) {

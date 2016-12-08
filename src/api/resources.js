@@ -21,3 +21,4 @@ Vue.http.interceptors.push((request, next) => {
 })
 
 export const TradeResource = Vue.resource(API_ROOT + '/trade{/id}')
+export const SubmitBug = Vue.resource(API_ROOT + '/submit/bug')

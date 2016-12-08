@@ -13,10 +13,10 @@ export default function(router) {
             name: 'pay',
             component: require('./components/Pay/index.vue')
         },
-        '/develop': {
-            name: 'develop',
-            component: require('./components/Article/develop.vue')
-        },
+        // '/todomvc': {
+        //     name: 'todomvc',
+        //     component: require('./components/Todomvc/index.vue')
+        // },
         '/operation': {
             name: 'operation',
             component: require('./components/Article/operation.vue')

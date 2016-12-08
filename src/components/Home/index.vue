@@ -7,9 +7,8 @@
         (我的商品)
     </button>
 
-    {{navs}}
     <div v-for="t in navs">
-        {{t}}
+        {{t.name}}
     </div>
 </template>
 
@@ -53,26 +52,28 @@
         vuex: {
             getters: {
                 teacher: state => state.trades,
-                navs: [
-                    {
-                        name: '网页'
-                    },
-                    {
-                        name: '新闻'
-                    },
-                    {
-                        name: '贴吧'
-                    },
-                    {
-                        name: '知道'
-                    },
-                    {
-                        name: '音乐'
-                    },
-                    {
-                        name: '图片'
-                    },
-                ]
+                navs: () => {
+                    return [
+                        {
+                            name: '网页'
+                        },
+                        {
+                            name: '新闻'
+                        },
+                        {
+                            name: '贴吧'
+                        },
+                        {
+                            name: '知道'
+                        },
+                        {
+                            name: '音乐'
+                        },
+                        {
+                            name: '图片'
+                        },
+                    ]
+                }
             },
             actions: {
                 getTrade

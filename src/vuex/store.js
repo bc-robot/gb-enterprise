@@ -5,6 +5,7 @@ import createLogger from '../vuex-plugins/plugins/logger'
 
 
 import trades from './modules/trades'
+import buggy from './modules/buggy'
 
 const debug = process.env.NODE_ENV !== 'production'
 Vue.use(Vuex)
@@ -14,7 +15,7 @@ Vue.config.debug = debug
 
 export default new Vuex.Store({
     modules: {
-        trades
+        trades, buggy
     },
     // strict: debug,
     // plugins: middlewares,

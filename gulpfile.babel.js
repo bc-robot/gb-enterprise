@@ -13,7 +13,7 @@ import nodemon from 'gulp-nodemon'
 import open from 'open'
 import run from 'gulp-run'
 
-const DEV_PORT = 3000, PROD_PORT = 8400;
+const DEV_PORT = 3000, PROD_PORT = 8300;
 gulp.task('serve', cb => {
     let webpackConfig = require('./webpack.config');
     let myConfig = Object.create(webpackConfig);
