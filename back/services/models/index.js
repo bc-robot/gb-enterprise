@@ -6,7 +6,7 @@ var path = require('path');
 var Sequelize = require('sequelize');
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || 'development';
-var env = 'local'
+// var env = 'local'
 var config = require('../../config/secrets')['my'][env];
 console.log(config,'this is myconfig');
 var db = {};
@@ -22,6 +22,7 @@ var db = {};
             min: 0,
             idle: 1000
         },
+        timezone : "+08:00",
         define: {
             underscored: true
         }
@@ -35,7 +36,7 @@ fs
     })
     .forEach(function(file) {
         var model = sequelize['import'](path.join(__dirname, file));
-        console.log(model, 'this is the model - -- - -', model.name)
+        console.log(model.name,' => model is loaded!')
         db[model.name] = model;
     });
 

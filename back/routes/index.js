@@ -17,7 +17,7 @@ function register(app){
             return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
         })
         .forEach(function(file) {
-            reuqire('./' +dirname+'/'+ file)(app)
+            require('./' +dirname+'/'+ file)(app)
         });
 
     // fs.readdir(__dirname+'/'+dirname,function(err,files){

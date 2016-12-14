@@ -10,10 +10,16 @@ module.exports = function(sequelize, Sequelize) {
             },
             name: {
                 type: Sequelize.STRING
+            },
+            logo: {
+                type: Sequelize.STRING
+            },
+            brief: {
+                type: Sequelize.STRING
             }
         },
         {
-            'frezeTableName': true,
+            'freezeTableName': true,
             'tableName': 'enterprise',
             'timestamps': true,
             'createdAt': 'create_time',

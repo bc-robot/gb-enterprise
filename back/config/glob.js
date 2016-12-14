@@ -9,6 +9,7 @@ const logger = require('mini-logger');
 //moment时间
 const moment = require('moment');
 let _ = require('lodash');
+let bb = require('bluebird');
 
 let log = logger(conf.log);
 global.log = log;
@@ -17,6 +18,7 @@ global.path = path;
 // console.log('global-path');
 global.moment = moment;
 global._ = _;
+global.bb = bb;
 global.RES = RES;
 
 module.exports = {

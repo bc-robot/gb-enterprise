@@ -17,7 +17,7 @@ function authJwt(ctx,secret) {
                         // console.log(decoded ,Date.now());
                         if (decoded.exp >= (decoded.exp.toString().length == 10 ? Math.floor(Date.now()/1000):Date.now())) {
                             // reject({ code: 0, message: 'Access token has expired' });
-                            resolve(Object.assign({},ctx.request.body,decoded));
+                            resolve(Object.assign({},decoded,ctx.request.body));
                         }else {
                             reject("jwt过期")
                         }
